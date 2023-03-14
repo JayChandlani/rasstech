@@ -29,9 +29,7 @@ const limiter = rateLimit({
 app.use('/', limiter);
 
 // Routes 
-app.get('/', (req, res) => {
-    res.status(200).send("Welcome to Rasstech")
-})
+
 app.use('/auth', authRoutes);
 app.use('/', orderRoutes);
 app.use('/', servicesRoutes);
